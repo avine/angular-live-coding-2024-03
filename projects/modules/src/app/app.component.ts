@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'modules';
+  inputValue = 'Stéphane';
+
+  onInput(event: Event) {
+    const inputElement = event.target as HTMLInputElement;
+
+    this.inputValue = inputElement.value;
+  }
 }
