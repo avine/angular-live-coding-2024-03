@@ -1,1 +1,5 @@
-<router-outlet />
+<button (click)="show = !show; data = data + '...'">Toggle</button>
+
+@if (show) {
+  <app-child [data]="data" />
+}
