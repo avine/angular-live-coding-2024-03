@@ -1,0 +1,11 @@
+<button (click)="visible = !visible">Toggle modal</button>
+
+<div class="modal" [class.modal-visible]="visible">
+  <h2>
+    <ng-content select="[modal-title]" />
+  </h2>
+
+  <div class="content">
+    <ng-content select="[modal-content]" />
+  </div>
+</div>
