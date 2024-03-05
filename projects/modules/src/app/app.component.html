@@ -1,1 +1,23 @@
-<router-outlet />
+<h1 *ngIf="true; else noData">Hello</h1>
+<ng-template #noData>Bye</ng-template>
+
+<ul>
+  <li *ngFor="let product of products">{{ product }}</li>
+</ul>
+<ng-container *ngIf="!products.length">Vide...</ng-container>
+
+<hr />
+
+@if (true) {
+  <h1>Hello</h1>
+} @else {
+  Bye
+}
+
+<ul>
+  @for (product of products; track product.id) {
+    <li>{{ product.name }}</li>
+  } @empty {
+    <p>Vide...</p>
+  }
+</ul>

@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'modules';
+  products = [
+    { id: 1, name: 'P1' },
+    { id: 2, name: 'P2' },
+  ];
 }
