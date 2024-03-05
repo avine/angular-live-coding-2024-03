@@ -1,1 +1,9 @@
-<router-outlet />
+<button (click)="visible = !visible">Toggle</button>
+
+<ng-template [appIf]="visible" let-toto="data" let-titi>
+  <h1>COUCOU {{ toto }} / {{ titi }}</h1>
+</ng-template>
+
+<hr />
+
+<h1 *appIf="visible">COUCOU</h1>
