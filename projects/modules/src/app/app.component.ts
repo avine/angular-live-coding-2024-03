@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject, inject } from '@angular/core';
+import { FOO } from './app.module';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'modules';
+  foo = inject(FOO);
+
+  constructor(@Inject(FOO) public fooCopy: string) {}
 }
