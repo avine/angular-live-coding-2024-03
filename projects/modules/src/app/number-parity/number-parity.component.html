@@ -1,0 +1,3 @@
+<app-counter test-id="counter" [count]="count" (countChange)="count = $event" />
+
+<p test-id="parity">{{ count % 2 ? 'is odd' : 'is even' }}</p>
