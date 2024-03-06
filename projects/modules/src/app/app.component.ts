@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'modules';
+  now = Date.now();
+
+  arr = ['a', 'b', 'c'];
+
+  add() {
+    this.arr.push('NEW');
+
+    //this.arr = [...this.arr, 'NEW'];
+
+    console.log(this.arr);
+  }
 }

@@ -1,1 +1,5 @@
-<router-outlet />
+<button (click)="add()">{{ arr | fancy }}</button>
+
+<pre>{{ arr.join(', ') }}</pre>
+
+<h1>{{ now | date: 'fullDate' | uppercase }}</h1>

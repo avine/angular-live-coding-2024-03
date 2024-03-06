@@ -3,9 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FancyPipe } from './fancy.pipe';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, FancyPipe],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
