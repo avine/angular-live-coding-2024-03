@@ -1,1 +1,32 @@
 <router-outlet />
+
+<h1 appDemo #bar="appDemo">DEMO</h1>
+
+{{ bar.foo }}
+
+<br />
+<br />
+
+<input [(ngModel)]="value" />
+
+<br />
+<br />
+
+<form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+  <input placeholder="Name" name="name" ngModel /><br />
+
+  <input placeholder="Email" name="email" ngModel #emailCtrl="ngModel" required minlength="5" /><br />
+
+  <app-nested-inputs />
+
+  <button>Submit</button>
+</form>
+
+<pre>{{ emailCtrl.errors | json }}</pre>
+
+<pre>Value {{ form.value | json }}</pre>
+
+<br />
+<br />
+
+<input [value]="value" (input)="value = inputRef.value" #inputRef />
